@@ -1,168 +1,151 @@
 ﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang=”ar” dir=”rtl”>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>استعلام بيانات منصة توفاس TOFAS - الصف الأول الثانوي</title>
+  <meta charset=”UTF-8”>
+  <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+  <title>استعلام بيانات منصة توفاس TOFAS – الصف الأول الثانوي</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { 
-      font-family: Tahoma, Arial, sans-serif; 
-      background: linear-gradient(135deg, #eef2f7 0%, #dce4ee 100%); 
-      color: #1e293b; 
-      padding: 20px; 
-      min-height: 100vh;
-      text-align: center; 
+•	{ box-sizing: border-box; margin: 0; padding: 0; }
+    Body { 
+      Font-family: Tahoma, Arial, sans-serif; 
+      Background: linear-gradient(135deg, #eef2f7 0%, #dce4ee 100%); 
+      Color: #1e293b; 
+      Padding: 15px; 
+      Min-height: 100vh;
+      Text-align: center; 
     }
     .card { 
-      background: #ffffff; 
-      max-width: 500px; 
-      margin: 15px auto; 
-      padding: 28px 24px; 
-      border-radius: 18px; 
-      box-shadow: 0 12px 30px rgba(30, 41, 59, 0.1); 
-      border-top: 6px solid #4338ca; 
+      Background: #ffffff; 
+      Max-width: 500px; 
+      Margin: 10px auto; 
+      Padding: 24px 20px; 
+      Border-radius: 18px; 
+      Box-shadow: 0 12px 30px rgba(30, 41, 59, 0.1); 
+      Border-top: 6px solid #4338ca; 
     }
-    .header { 
-      border-bottom: 2px solid #f1f5f9; 
-      padding-bottom: 18px; 
-      margin-bottom: 20px; 
-    }
-    .azhar-badge { color: #0f766e; font-size: 13px; font-weight: bold; margin-bottom: 6px; }
-    .institute-name { color: #1e1b4b; font-size: 21px; font-weight: bold; margin: 4px 0; }
+    .header { border-bottom: 2px solid #f1f5f9; padding-bottom: 15px; margin-bottom: 16px; }
+    .azhar-badge { color: #0f766e; font-size: 13px; font-weight: bold; margin-bottom: 5px; }
+    .institute-name { color: #1e1b4b; font-size: 20px; font-weight: bold; margin: 4px 0; }
     .platform-title { 
-      background: linear-gradient(135deg, #4338ca, #6366f1); 
-      color: #ffffff; 
-      display: inline-block; 
-      padding: 6px 18px; 
-      border-radius: 25px; 
-      font-size: 13px; 
-      font-weight: bold; 
-      margin-top: 10px; 
-      box-shadow: 0 4px 10px rgba(67, 56, 202, 0.25);
+      Background: linear-gradient(135deg, #4338ca, #6366f1); 
+      Color: #ffffff; 
+      Display: inline-block; 
+      Padding: 6px 16px; 
+      Border-radius: 25px; 
+      Font-size: 13px; 
+      Font-weight: bold; 
+      Margin-top: 8px; 
     }
-    .dean-name { color: #475569; font-size: 14px; font-weight: bold; margin-top: 10px; }
+    .dean-name { color: #475569; font-size: 14px; font-weight: bold; margin-top: 8px; }
     .designer-badge {
-      color: #4338ca; 
-      font-size: 13px; 
-      font-weight: bold; 
-      margin-top: 8px; 
-      background: #eef2ff; 
-      display: inline-block; 
-      padding: 4px 14px; 
-      border-radius: 15px; 
-      border: 1px solid #c7d2fe;
+      Color: #4338ca; 
+      Font-size: 13px; 
+      Font-weight: bold; 
+      Margin-top: 8px; 
+      Background: #eef2ff; 
+      Display: inline-block; 
+      Padding: 4px 14px; 
+      Border-radius: 15px; 
+      Border: 1px solid #c7d2fe;
     }
     
-    .notice { 
-      background: #fefce8; 
-      color: #854d0e; 
-      padding: 11px; 
-      border-radius: 10px; 
-      font-size: 13px; 
-      margin-bottom: 18px; 
-      border: 1px solid #fef08a; 
-      line-height: 1.6; 
+    Input { 
+      Width: 100%; 
+      Padding: 13px; 
+      Margin: 8px 0 12px 0; 
+      Border: 2px solid #cbd5e1; 
+      Border-radius: 12px; 
+      Font-size: 16px; 
+      Text-align: center; 
+      Font-family: inherit; 
+      Background: #f8fafc;
     }
-    input { 
-      width: 100%; 
-      padding: 14px; 
-      margin: 6px 0 12px 0; 
-      border: 2px solid #cbd5e1; 
-      border-radius: 12px; 
-      font-size: 16px; 
-      text-align: center; 
-      font-family: inherit; 
-      background: #f8fafc;
-      transition: 0.3s;
-    }
-    input:focus { border-color: #4338ca; background: #ffffff; box-shadow: 0 0 0 4px rgba(67, 56, 202, 0.1); outline: none; }
+    Input:focus { border-color: #4338ca; background: #ffffff; outline: none; }
     
     .student-item { 
-      margin-top: 16px; 
-      padding: 18px; 
-      background: #f8fafc; 
-      border: 1px solid #e2e8f0; 
-      border-right: 5px solid #4338ca; 
-      border-radius: 12px; 
-      text-align: right; 
+      Margin-top: 12px; 
+      Padding: 16px; 
+      Background: #f8fafc; 
+      Border: 1px solid #e2e8f0; 
+      Border-right: 5px solid #4338ca; 
+      Border-radius: 12px; 
+      Text-align: right; 
     }
-    .student-header { font-weight: bold; margin-bottom: 12px; color: #1e1b4b; font-size: 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
-    .row-data { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px dashed #cbd5e1; }
+    .student-header { font-weight: bold; margin-bottom: 10px; color: #1e1b4b; font-size: 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
+    .row-data { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px dashed #cbd5e1; }
     .row-data:last-of-type { border-bottom: none; }
-    .data-val { font-family: monospace; font-size: 15px; font-weight: bold; color: #4338ca; background: #eef2ff; padding: 3px 8px; border-radius: 6px; direction: ltr; }
+    .data-val { font-family: monospace; font-size: 17px; font-weight: bold; color: #4338ca; background: #eef2ff; padding: 4px 10px; border-radius: 6px; direction: ltr; user-select: all; }
     
-    .copy-btn { background: #4338ca; color: #fff; border: none; padding: 6px 14px; border-radius: 8px; font-size: 12px; cursor: pointer; font-family: inherit; font-weight: bold; }
-    
-    .smart-copy-btn {
-      display: block;
-      width: 100%;
-      background: linear-gradient(135deg, #d97706, #f59e0b);
-      color: #fff;
-      border: none;
-      padding: 13px;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 14px;
-      margin-top: 14px;
-      cursor: pointer;
-      font-family: inherit;
-      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
-      transition: 0.2s;
+    .copy-pass-btn { 
+      Background: #d97706; 
+      Color: #fff; 
+      Border: none; 
+      Padding: 8px 14px; 
+      Border-radius: 8px; 
+      Font-size: 13px; 
+      Cursor: pointer; 
+      Font-family: inherit; 
+      Font-weight: bold; 
     }
-    .smart-copy-btn:active { transform: scale(0.98); }
+    .copy-pass-btn:active { transform: scale(0.96); }
+
+    .steps-box {
+      Background: #fefce8;
+      Border: 1px solid #fef08a;
+      Color: #854d0e;
+      Padding: 12px;
+      Border-radius: 10px;
+      Font-size: 13px;
+      Margin-top: 14px;
+      Line-height: 1.7;
+      Text-align: right;
+    }
 
     .platform-btn { 
-      display: block; 
-      width: 100%; 
-      text-align: center; 
-      background: linear-gradient(135deg, #0f766e, #0d9488); 
-      color: #fff; 
-      text-decoration: none; 
-      padding: 13px; 
-      border-radius: 10px; 
-      font-weight: bold; 
-      font-size: 14px; 
-      margin-top: 10px; 
-      box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
+      Display: block; 
+      Width: 100%; 
+      Text-align: center; 
+      Background: linear-gradient(135deg, #0f766e, #0d9488); 
+      Color: #fff; 
+      Text-decoration: none;
+      Padding: 14px; 
+      Border-radius: 10px; 
+      Font-weight: bold; 
+      Font-size: 15px; 
+      Margin-top: 14px; 
+      Box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
     }
-    .portal-sub { font-size: 11px; font-weight: normal; display: block; margin-top: 4px; opacity: 0.9; }
-    .tip-box { font-size: 12px; color: #0f766e; background: #f0fdfa; border: 1px solid #ccfbf1; padding: 10px; border-radius: 8px; margin-top: 12px; line-height: 1.6; text-align: right; }
     
-    .hint-msg { color: #4338ca; margin-top: 12px; font-size: 13px; font-weight: bold; }
-    .error { color: #be123c; margin-top: 15px; font-weight: bold; font-size: 14px; }
-    .footer { margin-top: 28px; font-size: 13px; color: #64748b; border-top: 1px solid #f1f5f9; padding-top: 14px; line-height: 1.8; }
+    .hint-msg { color: #4338ca; margin-top: 10px; font-size: 13px; font-weight: bold; }
+    .error { color: #be123c; margin-top: 12px; font-weight: bold; font-size: 14px; }
+    .footer { margin-top: 22px; font-size: 13px; color: #64748b; border-top: 1px solid #f1f5f9; padding-top: 12px; line-height: 1.8; }
     .dev-name { color: #4338ca; font-weight: bold; }
   </style>
 </head>
 <body>
 
-<div class="card">
-  <div class="header">
-    <div class="azhar-badge">الأزهر الشريف • منطقة الجيزة الأزهرية • إدارة البدرشين</div>
-    <div class="institute-name">معهد فتيات البدرشين الإعدادي الثانوي</div>
-    <div class="platform-title">بوابة بيانات منصة توفاس (TOFAS) • الصف الأول الثانوي</div>
-    <div class="dean-name">عميدة المعهد: أ. مروة إدريس</div>
-    <div class="designer-badge">تصميم وتطوير / أ. وائل جمعة</div>
+<div class=”card”>
+  <div class=”header”>
+    <div class=”azhar-badge”>الأزهر الشريف • منطقة الجيزة الأزهرية • إدارة البدرشين</div>
+    <div class=”institute-name”>معهد فتيات البدرشين الإعدادي الثانوي</div>
+    <div class=”platform-title”>بوابة بيانات منصة توفاس (TOFAS) • الصف الأول الثانوي</div>
+    <div class=”dean-name”>عميدة المعهد: أ. مروة إدريس</div>
+    <div class=”designer-badge”>تصميم وتطوير / أ. وائل جمعة</div>
   </div>
 
-  <div class="notice">
-    اكتبي <strong>اسمك واسم الأب</strong> (أو كود الطالبة) للحصول على بيانات الدخول في خطوة واحدة.
-  </div>
+  <input type=”text” id=”searchInput” placeholder=”اكتبي اسمك واسم الأب أو كود الطالبة..." onkeyup=”liveSearch()”>
+  <div id=”results”></div>
 
-  <input type="text" id="searchInput" placeholder="اكتبي اسمك واسم الأب أو كود الطالبة..." onkeyup="liveSearch()">
-  <div id="results"></div>
-
-  <div class="footer">
+  <div class=”footer”>
     <div>مع أطيب التمنيات بالنجاح والتوفيق</div>
-    <div>جميع الحقوق محفوظة © 2026 | تصميم وتطوير: <span class="dev-name">أ. وائل جمعة</span></div>
+    <div>جميع الحقوق محفوظة © 2026 | تصميم وتطوير: <span class=”dev-name”>أ. وائل جمعة</span></div>
   </div>
 </div>
 
 <script>
-  const SPRIX_PORTAL_URL = "https://sprixportal.jp";
+  Const SPRIX_PORTAL_URL = https://sprixportal.jp;
 
-  const tofasStudents = [
+  Const tofasStudents = [
 
 {code:"3995537",name:"احلام السيد عواد محمد",id:"3995537",pass:"7Xg?ptUb"},
 {code:"1775028",name:"احلام سيد عبدالغني سيد سيد",id:"1775028",pass:"!uf9p8?Z"},
@@ -659,109 +642,119 @@
 {code:"6592374",name:"يمنى خالد محمود محمد",id:"6592374",pass:"BX!ce3tT"},
   ];
 
-  function normalize(text) {
-    return String(text).replace(/[أإآ]/g, 'ا').replace(/ة/g, 'ه').replace(/ى/g, 'ي').replace(/\s+/g, ' ').trim();
+  Function normalize(text) {
+    Return String(text).replace(/[أإآ]/g, ‘ا').replace(/ة/g, ‘ه').replace(/ى/g, ‘ي').replace(/\s+/g, ‘ ‘).trim();
   }
 
-  function copyText(text, btn) {
-    navigator.clipboard.writeText(text);
-    const oldText = btn.innerText;
-    btn.innerText = "تم النسخ ✓";
-    btn.style.background = "#0f766e";
+  Function copyPassword(text, btn) {
+    If (navigator.clipboard && window.isSecureContext) {
+      Navigator.clipboard.writeText(text).catch(() => fallbackCopy(text));
+    } else {
+      fallbackCopy(text);
+    }
+    Btn.innerText = “تم نسخ الباسورد ✓";
+    Btn.style.background = “#0f766e”;
     setTimeout(() => {
-      btn.innerText = oldText;
-      btn.style.background = "#4338ca";
-    }, 1500);
+      btn.innerText = “نسخ الباسورد";
+      btn.style.background = “#d97706”;
+    }, 2500);
   }
 
-  let copyStep = 0;
-  function copyBothSequential(id, pass, btn) {
-    if (copyStep === 0) {
-      navigator.clipboard.writeText(id);
-      btn.innerText = "1️⃣ تم نسخ الـ ID ✓ (اضغطي ثانيةً لنسخ الباسورد)";
-      btn.style.background = "#2563eb";
-      copyStep = 1;
-    } else {
-      navigator.clipboard.writeText(pass);
-      btn.innerText = "2️⃣ تم نسخ الباسورد أيضاً ✓ (افتحي البوابة الآن)";
-      btn.style.background = "#15803d";
-      copyStep = 0;
-      setTimeout(() => {
-        btn.innerText = "📋 اضغطي مرتين لنسخ الـ ID ثم الباسورد";
-        btn.style.background = "";
-      }, 4000);
-    }
+  Function fallbackCopy(text) {
+    Const textArea = document.createElement(“textarea”);
+    textArea.value = text;
+    textArea.style.position = “fixed”;
+    textArea.style.left = “-9999px”;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try { document.execCommand(‘copy’); } catch (err) {}
+    document.body.removeChild(textArea);
   }
 
-  function liveSearch() {
-    const rawInput = document.getElementById("searchInput").value;
-    const query = normalize(rawInput);
-    const resultsDiv = document.getElementById("results");
-    resultsDiv.innerHTML = "";
-    copyStep = 0;
-
-    if (!query) return;
-
-    const isNumeric = /^\d+$/.test(query);
-
-    if (isNumeric) {
-      if (query.length < 4) {
-        resultsDiv.innerHTML = '<div class="hint-msg">استكملي كتابة باقي أرقام كود الطالبة...</div>';
-        return;
-      }
-    } else {
-      const nameParts = query.split(' ');
-      if (nameParts.length < 2 || nameParts[1].length < 2) {
-        resultsDiv.innerHTML = '<div class="hint-msg">يرجى كتابة اسمك الأول متبوعاً بمسافة وحرفين على الأقل من اسم الأب.</div>';
-        return;
-      }
-    }
-
-    const matches = tofasStudents.filter(s => 
-      isNumeric ? normalize(s.code).includes(query) : normalize(s.name).includes(query)
-    );
-
-    if (matches.length === 0) {
-      resultsDiv.innerHTML = '<div class="error">لا توجد طالبة بهذه البيانات في قوائم الصف الأول الثانوي.</div>';
-      return;
-    }
-
+  Function renderCards(matches) {
+    Const resultsDiv = document.getElementById(“results”);
+    resultsDiv.innerHTML = “”;
     matches.forEach(s => {
       resultsDiv.innerHTML += `
-        <div class="student-item">
-          <div class="student-header">الطالبة: ${s.name}</div>
-          <div class="row-data">
-            <span><strong>كود الطالبة:</strong> <span class="data-val">${s.code}</span></span>
-            <button class="copy-btn" onclick="copyText('${s.code}', this)">نسخ</button>
+        <div class=”student-item”>
+          <div class=”student-header”>الطالبة: ${s.name}</div>
+          <div class=”row-data”>
+            <span><strong>المعرف (Login ID):</strong></span>
+            <span class=”data-val”>${s.id}</span>
           </div>
-          <div class="row-data">
-            <span><strong>المعرف (ID):</strong> <span class="data-val">${s.id}</span></span>
-            <button class="copy-btn" onclick="copyText('${s.id}', this)">نسخ</button>
-          </div>
-          <div class="row-data">
-            <span><strong>كلمة المرور:</strong> <span class="data-val">${s.pass}</span></span>
-            <button class="copy-btn" onclick="copyText('${s.pass}', this)">نسخ</button>
+          <div class=”row-data”>
+            <span><strong>كلمة المرور:</strong> <span class=”data-val”>${s.pass}</span></span>
+            <button class=”copy-pass-btn” onclick=”copyPassword(‘${s.pass}’, this)”>نسخ الباسورد</button>
           </div>
 
-          <button class="smart-copy-btn" onclick="copyBothSequential('${s.id}', '${s.pass}', this)">
-            📋 اضغطي مرتين لنسخ الـ ID ثم الباسورد
-          </button>
+          <div class=”steps-box”>
+            <strong>خطوات الدخول في 10 ثوانٍ (بدون رجوع هنا):</strong><br>
+            1️⃣ احفظي رقم الـ <strong>ID</strong> المكون من 7 أرقام (أو خدي لقطة شاشة).<br>
+            2️⃣ اضغطي على زر <strong>(نسخ الباسورد)</strong> البرتقالي.<br>
+            3️⃣ اضغطي الزر الأخضر بالأسفل، اكتبي الـ 7 أرقام بيدك، واعملي <strong>لصق (Paste)</strong> للباسورد!
+          </div>
 
-          <a href="${SPRIX_PORTAL_URL}" target="_blank" rel="noopener" class="platform-btn">
-            الانتقال إلى بوابة SPRIX / TOFAS ↗
-            <span class="portal-sub">(منصة البرمجة • اختبار TOFAS • النتيجة والشهادة)</span>
+          <a href=”${SPRIX_PORTAL_URL}” target=”_blank” rel=”noopener” class=”platform-btn”>
+            الدخول إلى منصة SPRIX / TOFAS الآن ↗
           </a>
-
-          <div class="tip-box">
-            <strong>طريقة اللصق السريع في المنصة:</strong><br>
-            • <strong>على الموبايل:</strong> اضغطي أيقونة <strong>الحافظة (📋)</strong> أعلى لوحة المفاتيح.<br>
-            • <strong>على الكمبيوتر:</strong> اضغطي زر <strong>Windows + V</strong> لاختيارهما بالترتيب.
-          </div>
         </div>
       `;
     });
   }
+
+  Function liveSearch() {
+    Const rawInput = document.getElementById(“searchInput”).value;
+    Const query = normalize(rawInput);
+    Const resultsDiv = document.getElementById(“results”);
+
+    If (!query) {
+      resultsDiv.innerHTML = “”;
+      try { localStorage.removeItem(“lastQuery”); } catch (e) {}
+      return;
+    }
+
+    Const isNumeric = /^\d+$/.test(query);
+
+    If (isNumeric) {
+      If (query.length < 4) {
+        resultsDiv.innerHTML = ‘<div class=”hint-msg”>استكملي كتابة باقي أرقام كود الطالبة...</div>’;
+        return;
+      }
+    } else {
+      Const nameParts = query.split(‘ ‘);
+      If (nameParts.length < 2 || nameParts.length < 2) {
+        resultsDiv.innerHTML = ‘<div class=”hint-msg”>يرجى كتابة اسمك الأول متبوعاً بمسافة وحرفين على الأقل من اسم الأب.</div>’;
+        return;
+      }
+    }
+
+    Const matches = tofasStudents.filter(s => 
+      isNumeric ? normalize(s.code).includes(query) : normalize(s.name).includes(query)
+    );
+
+    If (matches.length === 0) {
+      resultsDiv.innerHTML = ‘<div class=”error”>لا توجد طالبة بهذه البيانات في قوائم الصف الأول الثانوي.</div>’;
+      return;
+    }
+
+    Try { localStorage.setItem(“lastQuery”, rawInput); } catch (e) {}
+    renderCards(matches);
+  }
+
+  // استرجاع آخر بطاقة مفتوحة تلقائياً عند العودة للصفحة
+  Window.onload = function() {
+    Try {
+      Const saved = localStorage.getItem(“lastQuery”);
+      If (saved) {
+        Document.getElementById(“searchInput”).value = saved;
+        liveSearch();
+      }
+    } catch (e) {}
+  };
 </script>
 
 </body>
 </html>
+
+
