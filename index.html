@@ -28,18 +28,8 @@
       padding-bottom: 18px; 
       margin-bottom: 20px; 
     }
-    .azhar-badge { 
-      color: #0f766e; 
-      font-size: 13px; 
-      font-weight: bold; 
-      margin-bottom: 6px; 
-    }
-    .institute-name { 
-      color: #1e1b4b; 
-      font-size: 21px; 
-      font-weight: bold; 
-      margin: 4px 0; 
-    }
+    .azhar-badge { color: #0f766e; font-size: 13px; font-weight: bold; margin-bottom: 6px; }
+    .institute-name { color: #1e1b4b; font-size: 21px; font-weight: bold; margin: 4px 0; }
     .platform-title { 
       background: linear-gradient(135deg, #4338ca, #6366f1); 
       color: #ffffff; 
@@ -51,12 +41,7 @@
       margin-top: 10px; 
       box-shadow: 0 4px 10px rgba(67, 56, 202, 0.25);
     }
-    .dean-name { 
-      color: #475569; 
-      font-size: 14px; 
-      font-weight: bold; 
-      margin-top: 10px; 
-    }
+    .dean-name { color: #475569; font-size: 14px; font-weight: bold; margin-top: 10px; }
     .designer-badge {
       color: #4338ca; 
       font-size: 13px; 
@@ -91,12 +76,7 @@
       background: #f8fafc;
       transition: 0.3s;
     }
-    input:focus { 
-      border-color: #4338ca; 
-      background: #ffffff;
-      box-shadow: 0 0 0 4px rgba(67, 56, 202, 0.1);
-      outline: none; 
-    }
+    input:focus { border-color: #4338ca; background: #ffffff; box-shadow: 0 0 0 4px rgba(67, 56, 202, 0.1); outline: none; }
     
     .student-item { 
       margin-top: 16px; 
@@ -107,46 +87,31 @@
       border-radius: 12px; 
       text-align: right; 
     }
-    .student-header {
-      font-weight: bold; 
-      margin-bottom: 12px; 
-      color: #1e1b4b; 
-      font-size: 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid #e2e8f0;
-    }
-    .row-data { 
-      display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      padding: 9px 0; 
-      border-bottom: 1px dashed #cbd5e1; 
-    }
+    .student-header { font-weight: bold; margin-bottom: 12px; color: #1e1b4b; font-size: 16px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0; }
+    .row-data { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px dashed #cbd5e1; }
     .row-data:last-of-type { border-bottom: none; }
-    .data-val { 
-      font-family: monospace; 
-      font-size: 15px; 
-      font-weight: bold; 
-      color: #4338ca; 
-      background: #eef2ff;
-      padding: 3px 8px;
-      border-radius: 6px;
-      direction: ltr; 
-    }
+    .data-val { font-family: monospace; font-size: 15px; font-weight: bold; color: #4338ca; background: #eef2ff; padding: 3px 8px; border-radius: 6px; direction: ltr; }
     
-    .copy-btn { 
-      background: #4338ca; 
-      color: #fff; 
-      border: none; 
-      padding: 6px 14px; 
-      border-radius: 8px; 
-      font-size: 12px; 
-      cursor: pointer; 
-      font-family: inherit; 
-      font-weight: bold; 
+    .copy-btn { background: #4338ca; color: #fff; border: none; padding: 6px 14px; border-radius: 8px; font-size: 12px; cursor: pointer; font-family: inherit; font-weight: bold; }
+    
+    /* زر النسخ المزدوج الذكي */
+    .smart-copy-btn {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, #d97706, #f59e0b);
+      color: #fff;
+      border: none;
+      padding: 13px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 14px;
+      cursor: pointer;
+      font-family: inherit;
+      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
       transition: 0.2s;
     }
-    .copy-btn:hover { background: #3730a3; }
+    .smart-copy-btn:active { transform: scale(0.98); }
 
     .platform-btn { 
       display: block; 
@@ -159,40 +124,15 @@
       border-radius: 10px; 
       font-weight: bold; 
       font-size: 14px; 
-      margin-top: 16px; 
+      margin-top: 10px; 
       box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
-      transition: 0.2s; 
     }
-    .platform-btn:hover { opacity: 0.95; transform: translateY(-1px); }
-    .portal-sub { 
-      font-size: 11px; 
-      font-weight: normal; 
-      display: block; 
-      margin-top: 4px; 
-      opacity: 0.9; 
-    }
-    .tip-box { 
-      font-size: 12px; 
-      color: #0f766e; 
-      background: #f0fdfa; 
-      border: 1px solid #ccfbf1;
-      padding: 9px; 
-      border-radius: 8px; 
-      margin-top: 12px; 
-      line-height: 1.5; 
-      text-align: center; 
-    }
+    .portal-sub { font-size: 11px; font-weight: normal; display: block; margin-top: 4px; opacity: 0.9; }
+    .tip-box { font-size: 12px; color: #0f766e; background: #f0fdfa; border: 1px solid #ccfbf1; padding: 10px; border-radius: 8px; margin-top: 12px; line-height: 1.6; text-align: right; }
     
     .hint-msg { color: #4338ca; margin-top: 12px; font-size: 13px; font-weight: bold; }
     .error { color: #be123c; margin-top: 15px; font-weight: bold; font-size: 14px; }
-    .footer { 
-      margin-top: 28px; 
-      font-size: 13px; 
-      color: #64748b; 
-      border-top: 1px solid #f1f5f9; 
-      padding-top: 14px; 
-      line-height: 1.8; 
-    }
+    .footer { margin-top: 28px; font-size: 13px; color: #64748b; border-top: 1px solid #f1f5f9; padding-top: 14px; line-height: 1.8; }
     .dev-name { color: #4338ca; font-weight: bold; }
   </style>
 </head>
@@ -208,7 +148,7 @@
   </div>
 
   <div class="notice">
-    للحفاظ على سرية بياناتك، اكتبي <strong>اسمك واسم الأب</strong> (أو كود الطالبة) للحصول على بيانات الدخول.
+    اكتبي <strong>اسمك واسم الأب</strong> (أو كود الطالبة) للحصول على بيانات الدخول في خطوة واحدة.
   </div>
 
   <input type="text" id="searchInput" placeholder="اكتبي اسمك واسم الأب أو كود الطالبة..." onkeyup="liveSearch()">
@@ -735,6 +675,25 @@
     }, 1500);
   }
 
+  // دالة النسخ المزدوج: تنسخ الـ ID أولاً ثم الباسورد تلقائياً لحفظهما معاً في حافظة الموبايل
+  async function copyBothSequential(id, pass, btn) {
+    try {
+      await navigator.clipboard.writeText(id);
+      btn.innerText = "جاري نسخ الباسورد...";
+      setTimeout(async () => {
+        await navigator.clipboard.writeText(pass);
+        btn.innerText = "تم نسخ الـ ID والباسورد معاً في الحافظة ✓";
+        btn.style.background = "#15803d";
+        setTimeout(() => {
+          btn.innerText = "📋 نسخ الـ ID والباسورد معاً (بضغطة واحدة)";
+          btn.style.background = "";
+        }, 3000);
+      }, 450);
+    } catch (err) {
+      alert("اضغطي على زر نسخ بجانب كل بيان");
+    }
+  }
+
   function liveSearch() {
     const rawInput = document.getElementById("searchInput").value;
     const query = normalize(rawInput);
@@ -783,11 +742,22 @@
             <span><strong>كلمة المرور:</strong> <span class="data-val">${s.pass}</span></span>
             <button class="copy-btn" onclick="copyText('${s.pass}', this)">نسخ</button>
           </div>
+
+          <button class="smart-copy-btn" onclick="copyBothSequential('${s.id}', '${s.pass}', this)">
+            📋 نسخ الـ ID والباسورد معاً (بضغطة واحدة)
+          </button>
+
           <a href="${SPRIX_PORTAL_URL}" target="_blank" rel="noopener" class="platform-btn">
-            الانتقال إلى بوابة SPRIX / TOFAS (في نافذة جديدة) ↗
+            الانتقال إلى بوابة SPRIX / TOFAS ↗
             <span class="portal-sub">(منصة البرمجة • اختبار TOFAS • النتيجة والشهادة)</span>
           </a>
-          <div class="tip-box">💡 نصيحة: انسخي الـ ID ثم الباسورد معاً، وعند فتح البوابة اختاري القسم المطلوب واضغطي على <strong>الحافظة (📋)</strong> في لوحة المفاتيح للصقهما فوراً.</div>
+
+          <div class="tip-box">
+            <strong>طريقة الدخول السريع دون العودة هنا:</strong><br>
+            1. اضغطي على الزر البرتقالي لنسخ البيانين معاً.<br>
+            2. اضغطي على الزر الأخضر لفتح البوابة.<br>
+            3. هناك اضغطي على أيقونة <strong>الحافظة (📋)</strong> أعلى لوحة المفاتيح لتجدي الـ ID والباسورد محفوظين بالترتيب!
+          </div>
         </div>
       `;
     });
