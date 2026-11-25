@@ -94,7 +94,6 @@
     
     .copy-btn { background: #4338ca; color: #fff; border: none; padding: 6px 14px; border-radius: 8px; font-size: 12px; cursor: pointer; font-family: inherit; font-weight: bold; }
     
-    /* زر النسخ المزدوج الذكي */
     .smart-copy-btn {
       display: block;
       width: 100%;
@@ -675,22 +674,22 @@
     }, 1500);
   }
 
-  // دالة النسخ المزدوج: تنسخ الـ ID أولاً ثم الباسورد تلقائياً لحفظهما معاً في حافظة الموبايل
-  async function copyBothSequential(id, pass, btn) {
-    try {
-      await navigator.clipboard.writeText(id);
-      btn.innerText = "جاري نسخ الباسورد...";
-      setTimeout(async () => {
-        await navigator.clipboard.writeText(pass);
-        btn.innerText = "تم نسخ الـ ID والباسورد معاً في الحافظة ✓";
-        btn.style.background = "#15803d";
-        setTimeout(() => {
-          btn.innerText = "📋 نسخ الـ ID والباسورد معاً (بضغطة واحدة)";
-          btn.style.background = "";
-        }, 3000);
-      }, 450);
-    } catch (err) {
-      alert("اضغطي على زر نسخ بجانب كل بيان");
+  let copyStep = 0;
+  function copyBothSequential(id, pass, btn) {
+    if (copyStep === 0) {
+      navigator.clipboard.writeText(id);
+      btn.innerText = "1️⃣ تم نسخ الـ ID ✓ (اضغطي ثانيةً لنسخ الباسورد)";
+      btn.style.background = "#2563eb";
+      copyStep = 1;
+    } else {
+      navigator.clipboard.writeText(pass);
+      btn.innerText = "2️⃣ تم نسخ الباسورد أيضاً ✓ (افتحي البوابة الآن)";
+      btn.style.background = "#15803d";
+      copyStep = 0;
+      setTimeout(() => {
+        btn.innerText = "📋 اضغطي مرتين لنسخ الـ ID ثم الباسورد";
+        btn.style.background = "";
+      }, 4000);
     }
   }
 
@@ -699,6 +698,7 @@
     const query = normalize(rawInput);
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = "";
+    copyStep = 0;
 
     if (!query) return;
 
@@ -744,7 +744,7 @@
           </div>
 
           <button class="smart-copy-btn" onclick="copyBothSequential('${s.id}', '${s.pass}', this)">
-            📋 نسخ الـ ID والباسورد معاً (بضغطة واحدة)
+            📋 اضغطي مرتين لنسخ الـ ID ثم الباسورد
           </button>
 
           <a href="${SPRIX_PORTAL_URL}" target="_blank" rel="noopener" class="platform-btn">
@@ -753,10 +753,9 @@
           </a>
 
           <div class="tip-box">
-            <strong>طريقة الدخول السريع دون العودة هنا:</strong><br>
-            1. اضغطي على الزر البرتقالي لنسخ البيانين معاً.<br>
-            2. اضغطي على الزر الأخضر لفتح البوابة.<br>
-            3. هناك اضغطي على أيقونة <strong>الحافظة (📋)</strong> أعلى لوحة المفاتيح لتجدي الـ ID والباسورد محفوظين بالترتيب!
+            <strong>طريقة اللصق السريع في المنصة:</strong><br>
+            • <strong>على الموبايل:</strong> اضغطي أيقونة <strong>الحافظة (📋)</strong> أعلى لوحة المفاتيح.<br>
+            • <strong>على الكمبيوتر:</strong> اضغطي زر <strong>Windows + V</strong> لاختيارهما بالترتيب.
           </div>
         </div>
       `;
