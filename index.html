@@ -766,27 +766,3 @@
     renderCards(matches);
   }
 
-  // التحكم في الخلفية الصوتية
-  const audio = document.getElementById("bgAudio");
-  const audioBtn = document.getElementById("audioBtn");
-  audio.volume = 0.3;
-  let isPlaying = false;
-
-  function toggleAudio() {
-    if (isPlaying) {
-      audio.pause();
-      audioBtn.innerText = "🔇 تشغيل الصوت";
-      audioBtn.style.background = "#4338ca";
-    } else {
-      audio.play();
-      audioBtn.innerText = "🔊 كتم الصوت";
-      audioBtn.style.background = "#0f766e";
-    }
-    isPlaying = !isPlaying;
-  }
-
-  function autoStartAudio() {
-    if (!isPlaying) {
-      audio.play().then(() => {
-        isPlaying = true;
-        audioBtn.innerText = "🔊 كتم الصوت";
